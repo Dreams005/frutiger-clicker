@@ -5,10 +5,11 @@ import ParallaxBackground from "./components/ParallaxBackground";
 import SocialShare from "./components/SocialShare";
 import SoundCloudPlayer from "./components/SoundCloudPlayerWithVolume";
 import Footer from "./components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App: React.FC = () => {
   return (
-    <>
+    <main>
       <ParallaxBackground>
         <Header />
         <CounterBody />
@@ -18,7 +19,8 @@ const App: React.FC = () => {
       <div className="footer-wrapper">
         <Footer />
       </div>
-    </>
+      <SpeedInsights />
+    </main>
   );
 };
 

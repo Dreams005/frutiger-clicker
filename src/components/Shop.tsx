@@ -76,10 +76,10 @@ const Shop: React.FC = () => {
   const upgradeSound = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    clickSound.current = new Audio("../public/sounds/button_004.mp3");
+    clickSound.current = new Audio("/sounds/button_004.mp3");
     clickSound.current.volume = 0.1;
 
-    upgradeSound.current = new Audio("../public/sounds/button_005.mp3");
+    upgradeSound.current = new Audio("/sounds/button_005.mp3");
     upgradeSound.current.volume = 0.2;
   }, []);
 
