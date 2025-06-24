@@ -1,0 +1,23 @@
+.parallax-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #111; /* fallback */
+}
+
+.parallax-background {
+  position: absolute;
+  width: calc(100% + 80px);
+  height: calc(100% + 80px);
+  background-image: url('/frutiger-3.jpg'); /* update path if needed */
+  background-size: cover;
+  background-position: center;
+  transition: background-position 0.1s ease;
+  z-index: 0;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+}
