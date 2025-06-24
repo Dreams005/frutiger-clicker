@@ -6,6 +6,7 @@ import SocialShare from "./components/SocialShare";
 import SoundCloudPlayer from "./components/SoundCloudPlayerWithVolume";
 import Footer from "./components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <div className="footer-wrapper">
         <Footer />
       </div>
+      <Analytics />
       <SpeedInsights />
     </main>
   );
