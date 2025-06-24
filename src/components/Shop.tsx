@@ -57,6 +57,38 @@ const upgrades: Upgrade[] = [
     multiplierIncrease: 0,
     autoClickRate: 30,
   },
+  { id: 10, name: "Quantum Finger", price: 200000, multiplierIncrease: 25 },
+  { id: 11, name: "Finger Galaxy", price: 750000, multiplierIncrease: 50 },
+  {
+    id: 12,
+    name: "Infinity Clicker",
+    price: 1500000,
+    multiplierIncrease: 0,
+    autoClickRate: 100,
+  },
+  { id: 13, name: "Fingularity Core", price: 5000000, multiplierIncrease: 150 },
+  { id: 14, name: "God Finger", price: 12000000, multiplierIncrease: 300 },
+  {
+    id: 15,
+    name: "Multiversal Bot",
+    price: 25000000,
+    multiplierIncrease: 0,
+    autoClickRate: 500,
+  },
+  {
+    id: 16,
+    name: "Singularity Farm",
+    price: 60000000,
+    multiplierIncrease: 0,
+    autoClickRate: 1000,
+  },
+  {
+    id: 17,
+    name: "Dark Matter Fingers",
+    price: 150000000,
+    multiplierIncrease: 1000,
+  },
+  { id: 18, name: "Fingerverse", price: 500000000, multiplierIncrease: 3000 },
 ];
 
 const Shop: React.FC = () => {
@@ -184,13 +216,6 @@ const Shop: React.FC = () => {
             );
           })}
         </ul>
-        <ResetButton
-          onReset={() => {
-            setClicks(0);
-            setMultiplier(1);
-            setOwned({});
-          }}
-        />
       </div>
 
       <div className="shop-center">
@@ -223,6 +248,24 @@ const Shop: React.FC = () => {
               +{multiplier.toFixed(2)}
             </span>
           ))}
+
+          <ResetButton
+            className="reset-button desktop-only"
+            onReset={() => {
+              setClicks(0);
+              setMultiplier(1);
+              setOwned({});
+            }}
+          />
+
+          <ResetButton
+            className="reset-button mobile-only"
+            onReset={() => {
+              setClicks(0);
+              setMultiplier(1);
+              setOwned({});
+            }}
+          />
         </div>
       </div>
     </div>

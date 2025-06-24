@@ -1,6 +1,6 @@
 .social-share-container {
   position: fixed;
-  top: 2vh;
+  bottom: 2vh;
   right: 20px;
   max-width: 250px;
   padding: 1rem;
@@ -39,4 +39,10 @@
 
 .social-share-button:hover {
   background-color: rgba(165, 165, 165, 0.5);
+}
+
+@media screen and (max-width: 1300px) {
+    div.social-share-container {
+        display: none;
+    }
 }

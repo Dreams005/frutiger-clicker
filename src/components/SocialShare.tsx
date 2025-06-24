@@ -12,7 +12,7 @@ const SocialShare: React.FC = () => {
 
   return (
     <div className="social-share-container">
-      <h3>Share</h3>
+      <h3>Share the game if you enjoyed :)</h3>
 
       <button
         className="social-share-button"

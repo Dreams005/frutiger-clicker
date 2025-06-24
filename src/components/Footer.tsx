@@ -13,17 +13,20 @@ const Footer: React.FC = () => {
           <p>© {currentYear} All rights reserved.</p>
         </div>
 
-        <ul className="footer-links">
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="/privacy">Privacy</a>
-          </li>
-        </ul>
+        <div className="coming-soon">
+          <h3>Coming soon</h3>
+          <ul className="footer-links">
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/privacy">Privacy</a>
+            </li>
+          </ul>
+        </div>
 
         <div className="footer-socials">
           <a

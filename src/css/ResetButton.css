@@ -8,3 +8,28 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+.desktop-only {
+  display: inline-block;
+  margin-top: 1rem;
+  
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-block;
+    position: fixed;
+    bottom: 62.5%;
+    left: 75%;
+    margin: 0;
+    z-index: 100000;
+  }
+}

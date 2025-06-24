@@ -11,15 +11,17 @@ button, .shop-click-button, .shop-upgrade-button {
   height: 100vh;
   padding: 1rem;
   box-sizing: border-box;
-  gap: 2rem;
   color: #eee;
 }
 
 .shop-sidebar {
   width: 300px;
   text-align: left;
-  border-right: 1px solid #555;
   padding-right: 1rem;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .shop-sidebar h3 {
@@ -30,6 +32,10 @@ button, .shop-click-button, .shop-upgrade-button {
   list-style: none;
   padding: 0;
   margin: 0;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 8.5rem;
 }
 
 .shop-upgrade-item {
@@ -61,7 +67,7 @@ button, .shop-click-button, .shop-upgrade-button {
 }
 
 .shop-center {
-  width: 400px;
+  width: 100%;
   min-width: 400px;
   max-width: 400px;
   text-align: center;
@@ -77,10 +83,6 @@ button, .shop-click-button, .shop-upgrade-button {
 .shop-clicks.active {
   color: #3caaff;
   animation: pulseColor 3s infinite alternate;
-}
-
-.shop-click-button {
-  margin-bottom: 1rem;
 }
 
 .pop.clone {
@@ -108,5 +110,44 @@ button, .shop-click-button, .shop-upgrade-button {
   100% {
     opacity: 0;
     transform: translateY(40px) translateX(var(--xOffset, 0)) rotate(calc(var(--rotation, 0deg) + 90deg));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shop-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop-center {
+    order: -1;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .shop-sidebar {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .shop-upgrades-list {
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    overflow-y: auto;
+    margin-bottom: 3.2rem;
+  }
+
+  .shop-upgrade-button {
+    width: 100%;
+  }
+
+  .shop-sidebar h3 {
+    position: static;
+    background-color: transparent;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 }

@@ -5,7 +5,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="container-header">
-      <header>
+      <header className="wave-header">
         Welcome to{" "}
         <strong>
           {text.split("").map((char, i) => (
